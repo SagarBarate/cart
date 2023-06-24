@@ -1,13 +1,9 @@
 import React from 'react';
-import './App.css';
 
 function App() {
-  const na = "hjvj";
   return (
     <div className="App">
-      <h1 >
-        Cart {na}
-      </h1>
+      <h1>Cart</h1>
     </div>
   );
 }
