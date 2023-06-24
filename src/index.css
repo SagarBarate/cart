@@ -7,7 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+cart-item{
+  display: inline-flex;
+  margin: 20px 10px;
+
 }
+
+
+
