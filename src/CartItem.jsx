@@ -13,7 +13,23 @@ class CartItem extends React.Component {
     
   }
   increaseQuantity =() =>{
-    console.log('this.state', this.state);
+    //console.log('this.state', this.state);
+
+    increaseQuantity =() =>{
+
+      // console.log('this.state', this.state);
+  
+      // setState form 1
+      // this.setState({
+      //   qty:this.state.qty + 1   shallow merging will happen here with the parent object and react will render the new value
+      // });
+      
+      //setState form 2
+      this.setState((prevState)=>{
+        return{
+          qty: prevState.qty +1
+        }
+      })
   }
   render () {
     const {price, title, qty} = this.state;// object destructuring is done here that i want this properites from this.state object
@@ -31,7 +47,7 @@ class CartItem extends React.Component {
         <img alt="increase"
          className='action-icons'
           src='https://cdn-icons-png.flaticon.com/128/992/992651.png'
-          onClick={this.increaseQuantity(this)}
+          onClick={this.increaseQuantity}
           />
 
         <img alt="decrease" 
