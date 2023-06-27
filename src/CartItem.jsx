@@ -50,6 +50,10 @@ class CartItem extends React.Component {
           onClick={this.increaseQuantity}
           />
 
+
+
+
+
         <img alt="decrease" 
         className='action-icons' 
         src='https://cdn-icons-png.flaticon.com/128/3841/3841636.png'
