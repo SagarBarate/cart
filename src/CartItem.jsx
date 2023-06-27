@@ -22,8 +22,6 @@ class CartItem extends React.Component {
         <div className="left-block">
           <img style={styles.image} />
         </div>
-
-        
         <div className="right-block">
           <div style={ { fontSize: 25 } }>{title}</div>
           <div style={ { color: '#777' } }>{price}</div>
