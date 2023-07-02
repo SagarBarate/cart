@@ -10,10 +10,44 @@ class CartItem extends React.Component {
       qty:1,
       img:''
     }
+
+    this.testing();
     
   }
-  increaseQuantity =() =>{
-    //console.log('this.state', this.state);
+
+  testing(){
+    const promise = new Promise ((resolve ,reject) => {
+
+      setTimeout(() => {
+        resolve('done');
+      }, 5000)
+
+    })
+    promise.then(() => {
+      this.setState({qty:this.state.qty +10});
+
+      console.log('state', this.state);
+    });
+  }
+
+
+    decreaseQuantity= ()=>{
+      //console.log()
+      const{qty} =this.state;
+      if(qty ===0){
+        return;
+      }
+
+      
+      this.setState({
+        qty:this.state.qty -1
+
+
+      })
+    }
+
+    
+    
 
     increaseQuantity =() =>{
 
@@ -50,13 +84,10 @@ class CartItem extends React.Component {
           onClick={this.increaseQuantity}
           />
 
-
-
-
-
         <img alt="decrease" 
         className='action-icons' 
         src='https://cdn-icons-png.flaticon.com/128/3841/3841636.png'
+        onClick={this.decreaseQuantity}
         />
         
         <img alt="delete" 
