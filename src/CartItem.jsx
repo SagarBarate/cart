@@ -2,18 +2,19 @@ import React from 'react';
 
 class CartItem extends React.Component {
 
-  constructor(){
-    super(); //we are inherting the custructor from parent class
-    this.state={
-      price:999,
-      title:'Mobile phone',
-      qty:1,
-      img:''
-    }
-
-    this.testing();
+  // constructor(){
+  //   super(); //we are inherting the custructor from parent class
+  //   this.state={
+  //     price:999,
+  //     title:'Mobile phone',
+  //     qty:1,
+  //     img:''
+  //   }
+  //this.increasingQuantity = this.increasingQuantity.bind(this);
+  //   this.testing();
     
-  }
+  // }
+  // state is no longer needed here as we can use props and we can directly inherite from cart 
 
   testing(){
     const promise = new Promise ((resolve ,reject) => {
@@ -66,7 +67,14 @@ class CartItem extends React.Component {
       })
   }
   render () {
-    const {price, title, qty} = this.state;// object destructuring is done here that i want this properites from this.state object
+
+    //console.log('this.props', this.props)
+
+    
+    
+    //const {price, title, qty} = this.state;// object destructuring is done here that i want this properites from this.state object
+    const {price, title, qty} = this.props.product;
+    
     return (
       <div className="cart-item">
         <div className="left-block">
