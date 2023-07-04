@@ -71,6 +71,11 @@ class CartItem extends React.Component {
     console.log('this.props', this.props)
     //const {price, title, qty} = this.state;// object destructuring is done here that i want this properites from this.state object
     const {price, title, qty} = this.props.product;
+    const {product,
+      onIncreaseQuantity,
+      onDecreaseQuantity,
+      onDeleteProduct} = this.props;
+
     
     return (
       <div className="cart-item">
@@ -86,18 +91,19 @@ class CartItem extends React.Component {
         <img alt="increase"
          className='action-icons'
           src='https://cdn-icons-png.flaticon.com/128/992/992651.png'
-          onClick={() => this.props.onIncreaseQuantity(this.props.product)}
+          onClick={() => onIncreaseQuantity(product)}
           />
 
         <img alt="decrease" 
         className='action-icons' 
         src='https://cdn-icons-png.flaticon.com/128/3841/3841636.png'
-        onClick={() => this.props.onDecreaseQuantity(this.props.product)}
+        onClick={() => onDecreaseQuantity(product)}
         />
         
         <img alt="delete" 
         className='action-icons' 
         src='https://cdn-icons-png.flaticon.com/128/3096/3096687.png'
+        onClick={() => onDeleteProduct(product.id)}
         />
 
           </div>
