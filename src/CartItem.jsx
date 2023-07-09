@@ -1,8 +1,9 @@
 import React from 'react';
 
 const CartItem = (props) => {
-    console.log('props', props)
+  
     const {price, title, qty} = props.product;
+
     const {product,
       onIncreaseQuantity,
       onDecreaseQuantity,
@@ -20,6 +21,8 @@ const CartItem = (props) => {
           <div style={ { color: '#777' } }>Qty:{qty}</div>
           <div className="cart-item-actions">
             {/* Buttons */}
+
+
         <img alt="increase"
          className='action-icons'
           src='https://cdn-icons-png.flaticon.com/128/992/992651.png'
