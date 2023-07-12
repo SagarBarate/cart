@@ -2,18 +2,18 @@ import React from 'react';
 
 const CartItem = (props) => {
   
-    const {price, title, qty} = props.product;
+    const {price, title, qty} = props.product; //object destructuring is done here
 
     const {product,
       onIncreaseQuantity,
       onDecreaseQuantity,
-      onDeleteProduct} = props;
+      onDeleteProduct} = props;   //object destructuring is done here 
 
     
     return (
       <div className="cart-item">
         <div className="left-block">
-          <img style={styles.image} />
+          <img style={styles.image} src={product.img} />
         </div>
         <div className="right-block">
           <div style={ { fontSize: 25 } }>{title}</div>
